@@ -1,0 +1,6 @@
+biopython
+watchdog==4.0.0
+minio==7.2.5
+python-dotenv==1.0.1
+qdrant-client
+fastembed==0.2.6
