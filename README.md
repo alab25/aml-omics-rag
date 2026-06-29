@@ -40,3 +40,14 @@ source venv/Scripts/activate  # Windows: venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
+
+### 3. Initialize Infrastructure
+# Launch the persistent storage and vector index containers
+docker-compose up -d
+
+# Ensure Ollama is running, then pull the model
+ollama pull llama3
+
+### 4. Running the pipeline
+# Start the web interface
+streamlit run src/retrieval/app.py --server.fileWatcherType none
